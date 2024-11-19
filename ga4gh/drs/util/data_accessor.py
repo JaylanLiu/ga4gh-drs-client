@@ -165,7 +165,7 @@ class DataAccessor(object):
 
         dirname = os.path.join(self.cli_kwargs["output_dir"], self.drs_obj.id)
         if not os.path.exists(dirname):
-            os.mkdir(dirname)
+            os.makedirs(dirname)
         fname = self.drs_obj.name if self.drs_obj.name else self.drs_obj.id
         fname = os.path.basename(fname)
         if dirname:
